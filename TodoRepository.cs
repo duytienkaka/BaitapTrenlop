@@ -4,7 +4,7 @@ namespace TodoApp
 {
     public class TodoRepository
     {
-        private readonly List<Todo> _todos;
+        private readonly List<Todo> _todos = [];
         private readonly string _path = "todos.txt";
         private int _nextId = 1;
         public TodoRepository()
@@ -64,6 +64,17 @@ namespace TodoApp
             if (item != null)
             {
                 item.IsCompleted = !item.IsCompleted;
+                SaveToFile();
+                return true;
+            }
+            return false;
+        }
+        public bool UpdateTodo(int id, string title)
+        {
+            var item = _todos.FirstOrDefault(t => t.Id == id);
+            if (item != null)
+            {
+                item.Title = title;
                 SaveToFile();
                 return true;
             }

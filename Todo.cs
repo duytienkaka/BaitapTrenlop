@@ -16,7 +16,7 @@ namespace TodoApp
         {
             return $"{Id},{Title},{IsCompleted}";
         }
-        public static Todo LoadFromFile(string line)
+        public static Todo FromFileString(string line)
         {
             var parts = line.Split(",");
             

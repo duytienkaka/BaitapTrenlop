@@ -5,6 +5,15 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Todo.cs" />
+    <Compile Include="TodoRepository.cs" />
+    <Compile Include="TodoService.cs" />
+    <Compile Include="TodoUI.cs" />
+  </ItemGroup>
 
 </Project>

@@ -123,6 +123,7 @@ namespace TodoApp
                         return;
                     default:
                         Console.WriteLine("Lựa chọn không hợp lệ, vui lòng thử lại.");
+                        break;
                 }
             }
         }
